@@ -1,0 +1,164 @@
+\section{Il magnetismo}
+
+\subsection{Il campo magnetico}
+Il campo magnetico è un campo vettoriale che descrive l'influenza magnetica su cariche in movimento e correnti elettriche. 
+In un certo punto dello spazio, il campo magnetico ha:
+\begin{itemize}
+    \item come \textbf{direzione} quella lungo la quale si disporrebbe un ago magnetico libero di ruotare in un dato punto; 
+    \item come \textbf{verso} quello che va dal polo sud al polo nord dell'ago.
+\end{itemize}
+Un punto di un filo percorso da corrente risente di una forza $\dd \vec{F}$ pari a:
+\begin{equation}
+    \label{forza magnetica}
+    \dd \vec{F} = I \dd \vec{\ell} \times \vec{B}
+\end{equation}
+Dove $I$ è l'intensità di corrente che scorre nel filo, $\dd \vec{l}$ è l'intervallo infinitesimo di filo orientato nello stesso verso della corrente e $\vec{B}$ è il vettore campo magnetico. 
+La forza totale che agisce sul filo $\gamma$ sarà quindi:
+\begin{equation}
+    \int_{\gamma} \dd \vec{F}
+\end{equation}
+Che, nel caso di un filo rettilineo immerso in un campo uniforme, può essere semplificata come:
+\begin{equation}
+    \vec{F} = I \vec{\ell} \times \vec{B}
+\end{equation}
+Dall'equazione \ref{forza magnetica}, possiamo inoltre ricavare il valore del modulo del campo magnetico in un determinato punto:
+\begin{equation}
+    \abs{\vec{B}} = \frac{\abs{\dd \vec{F}}}{I\abs{\dd \vec{\ell}} \sin{\alpha}}
+\end{equation}
+Dove $\alpha$ è l'angolo tra il vettore $\dd \vec{L}$ e il vettore $\dd \vec{B}$. L'unità di misura per il campo magnetico risulta:
+\begin{equation}
+    \left[\vec{B}\right] = \frac{N}{A \cdot m} = T
+\end{equation}
+
+\subsection{La forza di Lorentz}
+Una particella carica immersa in un campo magnetico subisce una forza $\vec{F}$ pari a:
+\begin{equation}
+    \label{forza di Lorentz}
+    \vec{F} = q \vec{v} \times \vec{B}
+\end{equation}
+Considerando i moduli invece avremo:
+\begin{equation}
+    F = \abs{q}vB\sin{\alpha}
+\end{equation}
+Dove $\alpha$ è l'angolo tra i vettori $\vec{v}$ e $\vec{B}$. 
+Dalle equazioni precedenti possiamo dedurre che:
+\begin{itemize}
+    \item se $\vec{v} \parallel \vec{B}$ la carica non risente di alcuna forza (poiché $\vec{v} \times\vec{B} = 0$); 
+    \item se $\vec{v} \perp \vec{B}$ la carica si muove di moto circolare uniforme; 
+    \item se $\vec{v}$ e $\vec{B}$ sono incidenti la carica si muove di moto elicoidale. 
+\end{itemize}
+Analizziamo meglio gli ultimi due casi. 
+Quando $\vec{v} \perp \vec{B}$, $\vec{F} \perp \vec{v}$, pertanto $\abs{\vec{v}}$ è costante. 
+La carica si muove quindi di moto circolare uniforme e la forza di Lorentz è la forza centripeta. 
+Poiché $\alpha = 90 \degree$, $\sin{\alpha} = 1$ e possiamo quindi affermare che: 
+\begin{equation}
+    F = \abs{q}vB = \frac{mv^2}{r}
+\end{equation}
+Da cui possiamo ricavare il raggio della traiettoria circolare che la carica seguirà:
+\begin{equation}
+    r = \frac{mv}{\abs{q}B}
+\end{equation}
+Da cui possiamo poi ricavare altre misure come la velocità angolare $\omega$ e la frequenza $f$.
+Qualora $\vec{v}$ sia incidente a $\vec{B}$, possiamo scomporre $\vec{v}$ in $v_{\parallel} = v \cos{\alpha}$ e $v_{\perp} = v \sin{\alpha}$. 
+Il procedimento è poi analogo a quanto riportato sopra. 
+Possiamo inoltre calcolare il passo dell'elica, ovvero la distanza tra due \say{spire} consecutive. 
+
+\subsection{Il ciclotrone}
+Il ciclotrone è un macchinario utilizzato per accelerare particelle. 
+Fu inventato da Ernest Orlando Lawrence nel 1932 e viene sfruttato ancora oggi per accelerare ioni leggeri. 
+Due conduttori semicilindrici cavi (in gergo chiamati D) sono sottoposti a un campo magnetico uniforme (perpendicolare alle basi delle D). 
+Le due D sono collegate a un alternatore che crea un campo elettrico tra loro. 
+Nella zona centrale, una sorgente emette particelle cariche che vengono messe in moto dal campo elettrico. 
+
+Se si sincronizza il moto delle particelle con la frequenza della tensione alternata, ogni volta che la particella torna nella zona centrale incontra un campo favorevole che la accelera ulteriormente. 
+Perché questo avvenga è necessario che il tempo $\Delta t$ sia: 
+\begin{equation}
+    \Delta t = \frac{T}{2} = \frac{\pi m}{\abs{q} B}
+\end{equation}
+Questo è indipendente dalla velocità, quindi la particella mantiene la stessa frequenza nonostante cambi la sua energia cinetica. 
+La particella e la tensione alternata resteranno quindi sincronizzate purché quest'ultima sia: 
+\begin{equation}
+f = \frac{\abs{q} B}{2\pi m}
+\end{equation}
+Dal macchinario esce quindi un fascio di ioni ad alta energia utilizzati per ricerca o per fini medici come la cura di tumori. 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\linewidth]{cyclotron.jpg}
+    \caption{Il funzionamento schematico di un ciclotrone}
+\end{figure}
+
+\subsection{Il selettore di velocità}
+Questo macchinario sfrutta la sovrapposizione del campo magnetico e del campo elettrico in una stessa regione di spazio per ottenere un fascio di particelle alla stessa velocità. 
+Per costruire tale macchinario consideriamo la forza a cui è soggetta una carica immersa in un campo elettrico e magnetico: 
+\begin{equation}
+    \vec{F} = q \vec{E} + q \vec{v} \times \vec{B} = q(\vec{E} + \vec{v} \times \vec{B})
+\end{equation}
+Perché una particella carica ($q \neq 0$) non risulti né deflessa né accelerata, è necessario che $\vec{F} = 0$. 
+Questo può succedere solo quando $\vec{E} + \vec{v} \times \vec{B} = 0$ ovvero:
+\begin{equation}
+    \vec{E} \perp \vec{B} \\
+\end{equation}
+\begin{equation}
+    v = \frac{E}{B}
+\end{equation}
+
+\newpage
+
+\subsection{Lo spettrometro di massa}
+
+\begin{wrapfigure}{l}{0.5\textwidth}
+    \includegraphics[width=0.5\textwidth]{spettrometro}
+\end{wrapfigure}
+
+Lo spettrometro di massa è uno strumento utilizzato per misurare la massa degli ioni. 
+Il campione da esaminare viene innanzitutto ionizzato. 
+Per semplicità, consideriamo la prima ionizzazione, ovvero le particelle avranno carica $q=e$. 
+Gli ioni prodotti vengono accelerati con un campo elettrico e successivamente vengono fatti passare in un selettore di velocità. 
+Successivamente, gli ioni entrano in una regione dove è presente un campo magnetico uniforme che devia le particelle lungo traiettorie circolari. 
+Il raggio di tali traiettorie, come abbiamo osservato precedentemente, è:
+\begin{equation}
+    r = \frac{v}{eB} m
+\end{equation}
+È quindi possibile separare ioni di massa diversa a seconda del raggio ($r \propto m$). 
+
+\section{L'elettromagnetismo}
+
+\subsection{Le leggi di Maxwell}
+Lo studio dell'elettromagnetismo si basa sulle quattro equazioni di Maxwell.
+\begin{gather}
+    \label{gauss elettrico} \Phi_{S_C}(\vec{E}) = \frac{Q}{\epsilon_0} \\
+    \label{gauss magnetico} \Phi_{S_C}(\vec{B}) = 0 \\
+    \label{circuitazione elettrico} C_{\gamma}(\vec{E}) = -\diff{\Phi_{\gamma}(\vec{B})}{t} \\
+    \label{circuitazione magnetico} C_{\gamma}(\vec{B}) = \mu_0\left(\sum I_k + \epsilon_0 \diff{\Phi_S(\vec{E})}{t}\right)
+\end{gather}
+Analizziamo una per una cosa significano. 
+
+La legge di Gauss per il campo elettrico (\ref{gauss elettrico}), afferma che il flusso del campo elettrico uscente da una superficie chiusa $S_C$ è direttamente proporzionale alla carica $Q$ racchiusa al suo interno. 
+Da questa legge si deduce che le linee di campo elettrico possono essere aperte e quindi possiamo affermare che esistono \say{pozzi} e \say{sorgenti} di campo elettrico. 
+
+La legge di Gauss per il campo magnetico (\ref{gauss magnetico}) afferma che il flusso del campo magnetico uscente da una superficie chiusa $S_C$ è sempre nullo. 
+Questa legge ci dice che non esistono monopoli magnetici e che le linee di campo magnetico sono sempre chiuse: non possono esistere né \say{pozzi} né \say{sorgenti}. 
+
+La circuitazione del campo elettrico (\ref{circuitazione elettrico}) lungo una linea chiusa e orientata $\gamma$ è direttamente proporzionale alla derivata del flusso del campo magnetico concatenato con $\gamma$. 
+Da questa possiamo dedurre che il campo elettrostatico è conservativo poiché $C_{\gamma}(\vec{E}_{statico}) = 0$, mentre il campo elettrico indotto no ($C_{\gamma}(\vec{E}_{indotto}) \neq 0$). 
+
+La circuitazione del campo magnetico (\ref{circuitazione magnetico}) è direttamente proporzionale alla somma tra correnti conduzione e correnti di spostamento. 
+Questa legge comporta che, così come il campo elettrico può essere generato da un campo magnetico variabile, anche il campo magnetico può essere generato da un campo elettrico variabile. 
+
+\subsection{Le onde elettromagnetiche}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{onda}
+    \caption{Un'onda elettromagnetica piana sinusoidale}
+\end{figure}
+Un'importante previsione delle leggi di Maxwell fu l'esistenza delle onde elettromagnetiche. 
+Queste onde hanno alcune caratteristiche particolari:
+\begin{itemize}
+    \item possono propagarsi anche nel vuoto;
+    \item sono onde trasversali, ovvero i campi elettrico e magnetico vibrano perpendicolarmente alla direzione di propagazione dell'onda;
+    \item il campo elettrico $\vec{E}$ e quello magnetico $\vec{B}$ sono sempre perpendicolari;
+    \item il verso di propagazione dell'onda è quello del prodotto vettoriale $\vec{E} \times \vec{B}$;
+    \item $\vec{E}$ e $\vec{B}$ oscillano in fase, $E = c B$;
+    \item la velocità delle onde elettromagnetiche nel vuoto è $c = \frac{1}{\sqrt{\epsilon_0 \mu_0}} = 299\,792\,458 m/s$;
+\end{itemize}
